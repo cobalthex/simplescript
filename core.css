@@ -1,0 +1,282 @@
+body, html {
+	font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+	background: #444;
+	color: #fff;
+	padding: 20px;
+	margin: 0;
+}
+::selection { background: #888; }
+h1 {
+	margin: 0;
+}
+hr {
+	border: none;
+	border-top: 1px solid #888;
+}
+
+.fright {
+	float: right;
+}
+.tright {
+	text-align: right;
+}
+.tleft {
+	text-align: left;
+}
+.tcenter {
+	text-align: center;
+}
+.tright {
+	text-align: right;
+}
+
+.hint {
+	color: #888;
+	font-size: 60%;
+}
+
+#warn-nojs {
+	background: #c20;
+	border: 1px solid #800;
+	padding: 4px 8px;
+	font-weight: 800;
+	margin: 10px 0;
+	text-align: center;
+}
+#qbox {
+	overflow: hidden;
+	display: block;
+	min-height: 100px;
+	height: 400px;
+}
+#qbox-resizer {
+	height: 4px;
+	width: 100%;
+	background: #666;
+	border-bottom: 1px solid #444;
+	border-top: 1px solid #444;
+	cursor: ns-resize;
+}
+#qbottom {
+	margin-bottom: 20px;
+}
+#sidebar-resizer {
+	width: 4px;
+	height: 100%;
+	background: #666;
+	border-left: 1px solid #444;
+	border-right: 1px solid #444;
+	cursor: ew-resize;
+	float: left;
+}
+#sidebar {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	width: 20%;
+	max-width: 90%;
+	float: left;
+	background: #555;
+	min-width: 200px;
+	height: 100%;
+	text-align: center;
+	display: block;
+}
+#sidebar * {
+	font-size: 1.1em;
+}
+#sidebar #sb-actions {
+	border-bottom: 1px solid #666;
+}
+#sidebar #sb-ops {
+	overflow: auto;
+	height: 364px; /* not necessary */
+}
+#query_basic {
+	background: #fff;
+	display: block;
+	border: none;
+	width: 100%;
+}
+#query {
+	overflow: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 4px;
+	height: 100%;
+	background: #fff;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+}
+#query:focus {
+	outline: 0;
+}
+
+.op, button { /* query operator */
+	display: inline-table;
+	vertical-align: middle;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 2px 4px;
+	background: #45a;
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	user-select: none;
+	-webkit-user-select: none;
+	font-size: 16pt;
+}
+button {
+	padding: 2px 8px;
+	margin: 2px;
+	min-height: 1.5em;
+	min-width: 1.5em;
+}
+
+.op input {
+	font-size: 16pt;
+	margin: 0 1px;
+	border: 0;
+	padding: 0;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.1);
+	width: 1.5em;
+	min-width: 1.5em;
+	text-align: center;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.op input:focus {
+	outline: 0;
+}
+
+.op.placer {
+	background: transparent;
+	border: 1px dashed #aaa;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: 1px dashed #aaa;
+}
+
+#cursor {
+	display: inline-block;
+	font-size: 16pt;
+	width: 2px;
+	background: #ddd;
+}
+#sizer {
+	transition: 0.2s all;
+	font-size: 16pt;
+	visibility: hidden;
+	position: fixed;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+.results {
+	min-height: 2em;
+	max-width: 100%;
+	border: 1px solid #666;
+	padding: 2px;
+	overflow: auto;
+}
+.results th {
+	border-bottom: 1px solid #aaa;
+	color: #fc5;
+}
+.results td {
+	border-left: 1px solid #666;
+	padding: 5px 10px;
+}
+.results .rnum {
+	border-left: none;
+	color: #888;
+}
+
+#zoom-in, #zoom-out {
+	font-size: 12pt;
+	font-weight: 800;
+}
+
+#export-options {
+	max-width: 80%;
+}
+#export-options .export-btn {
+	font-size: 100%;
+  	line-height: 1em;
+  	color: rgba(255, 255, 255, 0.8);
+}
+
+
+.italic {
+	font-style: italic;
+}
+.wide {
+	min-width: 200px !important;
+}
+
+.bad {
+	background: #c04;
+}
+.good {
+	background: #4c0;
+}
+
+.comment {
+	background: #ddd;
+	color: #444;
+}
+.comment input {
+	color: #444;
+}
+.fullop {
+	background: #66f;
+}
+
+.export-btn {
+	background: #248;
+}
+#compat-view-btn {
+	background: #686;
+}
+
+.newline {
+	background: transparent;
+	border: none;
+	color: #ccc;
+	text-shadow: none;
+}
+
+/*used to print latex logo*/
+.tex, .latex {
+  font-family: serif !important;
+}
+.tex sub, .latex sub, .latex sup {
+  text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+  font-size: 1em;
+}
+
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
