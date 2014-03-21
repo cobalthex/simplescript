@@ -1,5 +1,6 @@
 <?php //Matt Hines -- 2014
-define('RULES_FILE', @$_GET['rules'] . '.json');
+define('RULES_FOLDER', @$_GET['rules'] . '/');
+define('RULES_FILE', RULES_FOLDER . 'rules.json');
 
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
@@ -14,7 +15,7 @@ $rules = json_decode(file_get_contents(RULES_FILE), true);
 	<title><?php echo @$rules['title'] ?></title>
 	<link rel='stylesheet' href='core.css'>
 	<?php if (isset($rules['stylesheet'])): ?>
-		<link rel='stylesheet' href='<?php echo $rules['stylesheet']; ?>'>
+		<link rel='stylesheet' href='<?php echo RULES_FOLDER . $rules['stylesheet']; ?>'>
 	<?php endif; ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script type='text/javascript' src='https://code.jquery.com/jquery.min.js'></script>
@@ -25,7 +26,7 @@ $rules = json_decode(file_get_contents(RULES_FILE), true);
 		{
 			parser_rules = rules;
 			$('head').append($('<script>', { 'id': 'parser_rules_js', 'type': 'text/javascript', 'src': 'core.js' })); //JS must be added after rules are loaded
-		$('head').append($('<script>', { 'id': 'custom_js', 'type': 'text/javascript', 'src': rules.scriptfile }));
+		$('head').append($('<script>', { 'id': 'custom_js', 'type': 'text/javascript', 'src': <?php echo RULES_FOLDER . @$rules['scriptfile']; ?> }));
 		});
 	</script>
 	<?php endif; ?>

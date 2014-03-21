@@ -1,0 +1,25 @@
+/* button colors */
+.oper {
+	background: #45a;
+}
+.join {
+	background: #fb0;
+}
+.var {
+	background: #2a8;
+}
+.result {
+	background: #0c6;
+}
+.assign {
+	background: #28f;
+}
+.aggregate {
+	background: #88a;
+}
+.special {
+	background: #333;
+}
+.set {
+	background: #72c;
+}
